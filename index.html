@@ -9,10 +9,71 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/data.js"></script>
 </head>
 
 <body>
+    <header>
+        <form id="listaTareas">
+            <div>
+                <label for="task"></label>
+                <input type="text" id="task" name="task">
+            </div>
+            <div>
+                <label for="priority"></label>
+                <select id="priority">
+                    <option value="">Selecciona prioridad</option>
+                    <option value="urgente">URGENTE</option>
+                    <option value="diaria">DIARIA</option>
+                    <option value="mensual">MENSUAL</option>
+                </select>
 
+                <input type="submit" value="Guardar">
+            </div>
+            <hr>
+            <div>
+                <label for="task"></label>
+                <select id="task2">
+                    <option value="">Selecciona prioridad</option>
+                    <option value="urgente">Urgente</option>
+                    <option value="diaria">Diaria</option>
+                    <option value="mensual">Mensual</option>
+                </select>
+            </div>
+            <div>
+                <label for="task"></label>
+                <input type="text" id="task3" name="task">
+            </div>
+        </form>
+
+    </header>
+    <main>
+        <section id="sectionTareas">
+            <h2>Lista de tareas</h2>
+            <hr>
+            <div class="flex">
+                <!-- <article>
+                    <h3>Nombre completo del empleado</h3>
+                    <ul>
+                        <li>Edad: 40</li>
+                        <li>Email: jj@gmail.com</li>
+                        <li>Puesto: desarrollador</li>
+                        <li>Salario: 50000</li>
+                    </ul>
+                </article> -->
+            </div>
+        </section>
+    </main>
+    <footer>copyright &copy 2023</footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/funciones.js"></script>
 </body>
 
 </html>
