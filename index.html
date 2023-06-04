@@ -14,44 +14,46 @@
 
 <body>
     <header>
-        <form id="listaTareas">
-            <div>
-                <label for="task"></label>
-                <input type="text" id="task" name="task">
-            </div>
-            <div>
-                <label for="priority"></label>
-                <select id="priority">
-                    <option value="">Selecciona prioridad</option>
-                    <option value="urgente">URGENTE</option>
-                    <option value="diaria">DIARIA</option>
-                    <option value="mensual">MENSUAL</option>
-                </select>
+        <div class="agregador">
+            <div class="mb-3">
 
-                <input type="submit" value="Guardar">
+                <input type="text" class="form-control" id="nuevaTarea" placeholder="Guardar nueva tarea">
             </div>
-            <hr>
+
             <div>
-                <label for="task"></label>
-                <select id="task2">
-                    <option value="">Selecciona prioridad</option>
-                    <option value="urgente">Urgente</option>
-                    <option value="diaria">Diaria</option>
-                    <option value="mensual">Mensual</option>
+                <select class="prioridad" aria-label="Default select example">
+                    <option selected>Seleccione prioridad</option>
+                    <option value="URGENTE">URGENTE</option>
+                    <option value="Diaria">Diaria</option>
+                    <option value="Mensual">Mensual</option>
                 </select>
             </div>
+            <button id="boton" type="button" class="btn btn-danger">Guardar</button>
+        </div>
+        <hr>
+        <div class="buscador">
             <div>
-                <label for="task"></label>
-                <input type="text" id="task3" name="task">
+                <select id="prioridad" class="prioridad" aria-label="Default select example">
+                    <option selected>Seleccione prioridad</option>
+                    <option value="URGENTE">URGENTE</option>
+                    <option value="Diaria">Diaria</option>
+                    <option value="Mensual">Mensual</option>
+                </select>
             </div>
-        </form>
+            <div class="mb-3">
+
+                <input type="text" class="form-control" id="buscarTarea" placeholder="Buscar tarea">
+            </div>
+        </div>
+        <hr>
 
     </header>
     <main>
         <section id="sectionTareas">
             <h2>Lista de tareas</h2>
             <hr>
-            <div class="flex">
+            <div id="realizarTareas">
+
                 <!-- <article>
                     <h3>Nombre completo del empleado</h3>
                     <ul>
