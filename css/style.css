@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.agregador {
+    display: flex;
+    width: 100%;
+    height: 30px;
+}
+
+.agregador button {
+    margin-left: 8px;
+}
+
+.buscador {
+    display: flex;
+    width: 100%;
+    height: 30px;
+}
