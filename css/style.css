@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: lightgray;
+    max-width: 100%;
+    height: 100%;
+    justify-content: center;
+
+
+}
+
+.agregador {
+    display: flex;
+    margin-top: 20px;
+    background-color: lightblue;
+    justify-content: center;
+
+}
+
+h2 {
+    padding-right: 20px;
+}
+
+select {
+    margin: 10px;
+}
+
+input {
+    height: 30px;
+    margin-top: 10px;
+}
+
+.agregador button {
+    margin: 8px 0;
+    height: 30px;
+}
+
+article {
+    display: flex;
+
+    justify-content: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+article li {
+    list-style: none;
+    font-size: 30px;
+
+
+}
+
+article a {
+    width: 70px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+    text-decoration: none;
+    margin-top: 10px;
+
+}
+
+hr {
+    width: 200px;
+}
+
+
+.buscador {
+    display: flex;
+    justify-content: center;
+    background-color: lightgoldenrodyellow;
+    margin-top: 20px;
+}
+
+.urgente {
+    background-color: lightcoral
+}
+
+.diaria {
+    background-color: lightseagreen;
+
+}
+
+.mensual {
+    background-color: lightgreen;
+
+}
