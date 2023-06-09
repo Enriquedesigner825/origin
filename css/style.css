@@ -4,18 +4,85 @@
     box-sizing: border-box;
 }
 
+.container {
+    background-color: lightgray;
+    max-width: 100%;
+
+    justify-content: center;
+
+
+}
+
 .agregador {
     display: flex;
-    width: 100%;
+    margin-top: 20px;
+    background-color: lightblue;
+    justify-content: center;
+
+}
+
+select {
+    margin: 10px;
+}
+
+input {
     height: 30px;
+    margin-top: 10px;
 }
 
 .agregador button {
-    margin-left: 8px;
+    margin: 8px 0;
+    height: 30px;
+}
+
+article {
+    display: flex;
+
+    justify-content: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+article ul {
+    list-style: none;
+    font-size: 30px;
+
+}
+
+article a {
+    width: 70px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+    text-decoration: none;
+    margin-top: 10px;
+
+}
+
+hr {
+    width: 200px;
 }
 
 .buscador {
     display: flex;
-    width: 100%;
-    height: 30px;
+    justify-content: center;
+    background-color: lightcoral;
+    margin-top: 20px;
+}
+
+.urgente {
+    background-color: lightcoral;
+    border: 1px solid red;
+}
+
+.diaria {
+    background-color: lightseagreen;
+    border: 1px solid blue;
+}
+
+.mensual {
+    background-color: lightgreen;
+    border: 1px solid green;
 }

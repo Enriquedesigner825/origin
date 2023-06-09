@@ -13,60 +13,52 @@
 </head>
 
 <body>
-    <header>
-        <div class="agregador">
-            <div class="mb-3">
+    <div class="container">
+        <header>
+            <div class="agregador">
+                <div class="mb-3">
 
-                <input type="text" class="form-control" id="nuevaTarea" placeholder="Guardar nueva tarea">
-            </div>
+                    <input type="text" class="form-control" id="nuevaTarea" placeholder="Guardar nueva tarea">
+                </div>
 
-            <div>
-                <select class="prioridad" aria-label="Default select example">
-                    <option selected>Seleccione prioridad</option>
-                    <option value="URGENTE">URGENTE</option>
-                    <option value="Diaria">Diaria</option>
-                    <option value="Mensual">Mensual</option>
-                </select>
+                <div>
+                    <select class="prioridad" aria-label="Default select example">
+                        <option selected>Seleccione prioridad</option>
+                        <option class="urgente" value="URGENTE">URGENTE</option>
+                        <option class="diaria" value="Diaria">Diaria</option>
+                        <option class="mensual" value="Mensual">Mensual</option>
+                    </select>
+                </div>
+                <button id="boton" type="button" class="btn btn-danger">Guardar</button>
             </div>
-            <button id="boton" type="button" class="btn btn-danger">Guardar</button>
-        </div>
-        <hr>
-        <div class="buscador">
-            <div>
-                <select id="prioridad" class="prioridad" aria-label="Default select example">
-                    <option selected>Seleccione prioridad</option>
-                    <option value="URGENTE">URGENTE</option>
-                    <option value="Diaria">Diaria</option>
-                    <option value="Mensual">Mensual</option>
-                </select>
-            </div>
-            <div class="mb-3">
-
-                <input type="text" class="form-control" id="buscarTarea" placeholder="Buscar tarea">
-            </div>
-        </div>
-        <hr>
-
-    </header>
-    <main>
-        <section id="sectionTareas">
-            <h2>Lista de tareas</h2>
             <hr>
-            <div id="realizarTareas">
+            <div class="buscador">
+                <div>
+                    <select class="search" aria-label="Default select example">
+                        <option selected>Seleccione prioridad</option>
+                        <option class="urgente" value="URGENTE">URGENTE</option>
+                        <option class="diaria" value="Diaria">Diaria</option>
+                        <option class="mensual" value="Mensual">Mensual</option>
+                    </select>
+                </div>
+                <div class="mb-3">
 
-                <!-- <article>
-                    <h3>Nombre completo del empleado</h3>
-                    <ul>
-                        <li>Edad: 40</li>
-                        <li>Email: jj@gmail.com</li>
-                        <li>Puesto: desarrollador</li>
-                        <li>Salario: 50000</li>
-                    </ul>
-                </article> -->
+                    <input type="text" class="form-control" id="buscarTarea" placeholder="Buscar tarea">
+                </div>
             </div>
-        </section>
-    </main>
-    <footer>copyright &copy 2023</footer>
+            <hr>
+
+        </header>
+        <main>
+            <section id="sectionTareas">
+                <h2>Lista de tareas</h2>
+                <hr>
+                <div id="realizarTareas">
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>ENRIQUE'S toDO LIST copyright &copy 2023</footer>
 
 
 

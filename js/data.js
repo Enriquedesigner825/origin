@@ -4,16 +4,16 @@ const tareas = [
     {
         idTarea: 0,
         titulo: 'Estudiar javaScript',
-        prioridad: 'urgente'
+        prioridad: 'URGENTE'
     },
     {
         idTarea: 1,
         titulo: 'Dormir',
-        prioridad: 'diaria'
+        prioridad: 'Diaria'
     },
     {
         idTarea: 2,
         titulo: 'Salir a comer',
-        prioridad: 'mensual'
+        prioridad: 'Mensual'
     },
 ]
