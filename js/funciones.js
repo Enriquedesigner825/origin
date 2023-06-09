@@ -1,9 +1,15 @@
 const inputRegister = document.querySelector('#nuevaTarea');
 const selectPrioridad = document.querySelector('.prioridad');
 const btn = document.querySelector('#boton')
-const realizarTareas = document.querySelector('#realizarTareas')
+const realizarTareas = document.querySelector('#sectionTareas')
+const searchPrioridad = document.querySelector('.search')
+const inputTitulo = document.querySelector('#buscarTarea');
+const inputSearch = document.querySelector('#buscarTarea');
+
+
 let idTarea = 3;
 btn.addEventListener('click', getData)
+
 
 
 function getData(event) {
@@ -11,7 +17,7 @@ function getData(event) {
     event.preventDefault();
 
     //para capturar los campos de un formulario nos valemos de su name para recoger value.
-    if (inputRegister.value && selectPrioridad.value === "") {
+    if (inputRegister.value === "" && selectPrioridad.value === "") {
         alert('No se puede encontrar vacio')
     }
     const newTarea = {
@@ -19,7 +25,6 @@ function getData(event) {
         titulo: inputRegister.value,
         prioridad: selectPrioridad.value,
     }
-
 
     //guardar la tarea en el array
     let guardado = saveTarea(tareas, newTarea)
@@ -32,7 +37,7 @@ function getData(event) {
 
     }
     inputRegister.value = "";
-    selectPrioridad.value = "Seleccione prioridad"
+    /* selectPrioridad.value = "Seleccione prioridad" */
 
 }
 
@@ -54,7 +59,7 @@ function printOneTarea(pTarea, pDom) {
     const li = document.createElement('li')
 
     ul.innerHTML = `<li> ${pTarea.titulo}</li>`;
-    li.classList.add(pTarea.prioridad)
+    article.classList.add(pTarea.prioridad)
 
 
     a.dataset.id = pTarea.id;
@@ -63,31 +68,32 @@ function printOneTarea(pTarea, pDom) {
     a.classList.add('boton');
     a.textContent = 'Borrar';
 
-    article.append(ul, a);
+    article.append(ul, li, a);
     pDom.append(article);
-    if (pTarea.prioridad === 'urgente') {
 
-    }
 }
+
 
 function printAllTareas(pList, realizarTareas) {
     pList.forEach(tarea => printOneTarea(tarea, realizarTareas));
     realizarTareas.innerHTML = "";
     if (pList.length !== 0) {
         pList.forEach(tarea => printOneTarea(tarea, realizarTareas));
-    } else {
-        realizarTareas.innerHTML = '<h2>NO HAY RESULTADOS</h2>'
-    }
+    } /* else {
+        realizarTareas.innerHTML = '<h2>NO HAY RESULTADOS</h2>' */
 }
+
+
 
 printAllTareas(tareas, realizarTareas);
 
 
-const searchPrioridad = document.querySelector('.buscador')
+
 function getPrioridad(event) {
 
     let listaFiltrada = filterTareaByPrioridad(tareas, event.target.value);
     printAllTareas(listaFiltrada, realizarTareas);
+
 }
 
 
@@ -104,7 +110,7 @@ function filterTareaByPrioridad(pTareasList, pPrioridad) {
     return filterList;
 }
 
-const inputSearch = document.querySelector('#buscarTarea');
+
 inputSearch.addEventListener('keypress', getSearch);
 
 function getSearch(event) {
@@ -115,17 +121,15 @@ function getSearch(event) {
         //aqui dentro quiero saber que tecla toco
         if (event.key === 'Enter') {
             word = event.target.value;
-
         }
     }
-
 }
 function filterByWord(pList, pWord) {
     return pList.filter(tareas => tareas.titulo.toLowerCase().includes(pWord.toLowerCase()))
 
 }
 
-const inputNombre = document.querySelector('#buscarTarea');
+
 
 function getName(event) {
     let palabraBuscar = event.target.value;
@@ -133,16 +137,16 @@ function getName(event) {
     printAllTareas(listaFiltrada, sectionTareas);
 }
 
-inputNombre.addEventListener('keypress', getName);
+inputTitulo.addEventListener('keyup', getName);
 
 function deleteItemArray(pId, pList) {
     //splice borrar por posicion tenemos una para saber su posicion
     //findIndex devuelve la posicion si se cumple la condicion y -1 si no cumple
-    let posicionBorrar = pList.findIndex(item => item.id === pId);
+    let posicionBorrar = pList.findIndex(item => item.idTarea === pId);
     if (posicionBorrar !== -1) {
         pList.splice(posicionBorrar, 1);
     }
-    console.log(pList);
+    console.log(pList)
 }
 
 function deleteItem(event) {
@@ -158,6 +162,8 @@ function deleteItem(event) {
     //borrar del array - saber el id el elemento 
     deleteItemArray(id, tareas);
 }
+
+
 
 
 
