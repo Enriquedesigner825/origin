@@ -7,7 +7,7 @@
 .container {
     background-color: lightgray;
     max-width: 100%;
-    height: 800px;
+    height: 100%;
     justify-content: center;
 
 
@@ -19,6 +19,10 @@
     background-color: lightblue;
     justify-content: center;
 
+}
+
+h2 {
+    padding-right: 20px;
 }
 
 select {
@@ -66,29 +70,24 @@ hr {
     width: 200px;
 }
 
-.container main h2 {
-    color: black;
-}
-
 
 .buscador {
     display: flex;
     justify-content: center;
-    background-color: lightcoral;
+    background-color: lightgoldenrodyellow;
     margin-top: 20px;
 }
 
 .urgente {
-    background-color: lightcoral;
-
+    background-color: lightcoral
 }
 
 .diaria {
     background-color: lightseagreen;
-    border: 1px solid blue;
+
 }
 
 .mensual {
     background-color: lightgreen;
-    border: 1px solid green;
+
 }

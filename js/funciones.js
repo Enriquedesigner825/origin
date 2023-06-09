@@ -13,10 +13,10 @@ btn.addEventListener('click', getData)
 
 
 function getData(event) {
-    //para prevenir la accion por defecto tanto form como de enlaces, debo hacerlos lo primero de todo.
+
     event.preventDefault();
 
-    //para capturar los campos de un formulario nos valemos de su name para recoger value.
+
     if (inputRegister.value === "" && selectPrioridad.value === "") {
         alert('No se puede encontrar vacio')
     }
@@ -26,9 +26,9 @@ function getData(event) {
         prioridad: selectPrioridad.value,
     }
 
-    //guardar la tarea en el array
+
     let guardado = saveTarea(tareas, newTarea)
-    //imprimirlo
+
     if (guardado === 'tarea guardada') {
         printOneTarea(newTarea, realizarTareas)
         idTarea++;
@@ -37,7 +37,7 @@ function getData(event) {
 
     }
     inputRegister.value = "";
-    /* selectPrioridad.value = "Seleccione prioridad" */
+
 
 }
 
@@ -53,8 +53,8 @@ function saveTarea(pList, pTarea) {
 
 function printOneTarea(pTarea, pDom) {
 
-    const article = document.createElement('article'); //<article></article>
-    const ul = document.createElement('ul'); // <ul></ul>
+    const article = document.createElement('article');
+    const ul = document.createElement('ul');
     const a = document.createElement('a');
     const li = document.createElement('li')
 
@@ -79,8 +79,7 @@ function printAllTareas(pList, realizarTareas) {
     realizarTareas.innerHTML = "";
     if (pList.length !== 0) {
         pList.forEach(tarea => printOneTarea(tarea, realizarTareas));
-    } /* else {
-        realizarTareas.innerHTML = '<h2>NO HAY RESULTADOS</h2>' */
+    }
 }
 
 
@@ -114,11 +113,11 @@ function filterTareaByPrioridad(pTareasList, pPrioridad) {
 inputSearch.addEventListener('keypress', getSearch);
 
 function getSearch(event) {
-    //si event viene del input solo quiero que sea por intro
-    /* https://rickandmortyapi.com/api/character/?name=rick */
+
+
     let word = "";
     if (event.target.id === 'buscarTarea') {
-        //aqui dentro quiero saber que tecla toco
+
         if (event.key === 'Enter') {
             word = event.target.value;
         }
@@ -137,16 +136,15 @@ function getName(event) {
     printAllTareas(listaFiltrada, sectionTareas);
 }
 
-inputTitulo.addEventListener('keyup', getName);
+inputTitulo.addEventListener('keypress', getName);
 
 function deleteItemArray(pId, pList) {
-    //splice borrar por posicion tenemos una para saber su posicion
-    //findIndex devuelve la posicion si se cumple la condicion y -1 si no cumple
+
     let posicionBorrar = pList.findIndex(item => item.idTarea === pId);
     if (posicionBorrar !== -1) {
         pList.splice(posicionBorrar, 1);
     }
-    console.log(pList)
+
 }
 
 function deleteItem(event) {
@@ -154,12 +152,10 @@ function deleteItem(event) {
 
     let id = parseInt(event.target.dataset.id)
 
-    //borrar fisicamente del dom
-    //antes de borrar desde a tengo que recoger el article - 2 nodos
+
     const articleDelete = event.target.parentNode;
     articleDelete.parentNode.removeChild(articleDelete);
 
-    //borrar del array - saber el id el elemento 
     deleteItemArray(id, tareas);
 }
 
