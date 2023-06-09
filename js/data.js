@@ -1,7 +1,7 @@
 
 
 const tareas = [
-    {
+    /* {
         idTarea: 0,
         titulo: 'Estudiar javaScript',
         prioridad: 'URGENTE'
@@ -15,5 +15,5 @@ const tareas = [
         idTarea: 2,
         titulo: 'Salir a comer',
         prioridad: 'Mensual'
-    },
+    }, */
 ]
